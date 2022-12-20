@@ -18,7 +18,7 @@ body{
     & .web-cursor{
         position: absolute;
         pointer-events: none;
-        transform: translate(-1.75rem, -1.75rem); 
+        transform: translate(-1.75vmax, -1.75vmax); 
         z-index: 100;
     }
     & .web-container{
@@ -27,19 +27,23 @@ body{
         height: 90vh;
         & .web-title{
             position: absolute;
-            font-size: 12rem;
+            font-size: 12vw;
             font-weight: 900;
             font-style: italic;
-            letter-spacing: 1.5rem;
+            letter-spacing: 1.5vw;
             left: 0%;
-            top: -7%;
+            top: 0%;
             text-shadow: 6px -6px 0 #222;
         }
         & .web-image{
             position: absolute;
-            left: 45%;
-            top: 48%;
+            left: 18%;
+            top: 20%;
+            max-width:18vw;
+            clip-path: ellipse(46% 51% at 48% 50%);
+            animation:imgShake ease-in-out alternate 1.5s infinite;
         }
+        
         & .web-animation{
             position: absolute;
             left: 50%;
@@ -51,6 +55,10 @@ body{
             background-color: transparent;
             left: 41%;
             top: 72%;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.3);
+            }
         }
     }
     & .web-links{
@@ -62,4 +70,8 @@ body{
     height: 10vh;
     
 }
+}
+@keyframes imgShake{
+    0%,66%{transform:rotate(10deg)}
+    33%,100%{transform:rotate(-10deg)}
 }

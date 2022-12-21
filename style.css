@@ -19,13 +19,16 @@ body {
 body .web-cursor {
   position: absolute;
   pointer-events: none;
-  transform: translate(-1.75vmax, -1.75vmax);
+  transform: translate(-3.75vmax, -3.75vmax);
   z-index: 100;
 }
 body .web-container {
   position: relative;
   width: 100vw;
   height: 90vh;
+  perspective: 250px;
+  -webkit-animation: conPerOri 2s linear infinite alternate;
+          animation: conPerOri 2s linear infinite alternate;
 }
 body .web-container .web-title {
   position: absolute;
@@ -39,13 +42,25 @@ body .web-container .web-title {
 }
 body .web-container .web-image {
   position: absolute;
-  left: 18%;
-  top: 20%;
+  left: 75%;
+  top: 15%;
   max-width: 18vw;
   -webkit-clip-path: ellipse(46% 51% at 48% 50%);
           clip-path: ellipse(46% 51% at 48% 50%);
-  -webkit-animation: imgShake ease-in-out alternate 1.5s infinite;
-          animation: imgShake ease-in-out alternate 1.5s infinite;
+  -webkit-animation: imgShake ease-in-out alternate 3s infinite;
+          animation: imgShake ease-in-out alternate 3s infinite;
+}
+body .web-container .web-message {
+  transform: rotateX(5deg) rotateY(8deg);
+  -webkit-clip-path: polygon(4% 4%, 96% 2%, 100% 71%, 73% 77%, 80% 100%, 53% 77%, 1% 73%);
+          clip-path: polygon(4% 4%, 96% 2%, 100% 71%, 73% 77%, 80% 100%, 53% 77%, 1% 73%);
+  width: 32%;
+  height: 30%;
+  background-color: beige;
+  border: 1px solid rgb(74, 61, 49);
+  position: absolute;
+  left: 10%;
+  top: 40%;
 }
 body .web-container .web-animation {
   position: absolute;
@@ -61,7 +76,7 @@ body .web-container .web-button {
   transition: 0.5s;
 }
 body .web-container .web-button:hover {
-  transform: scale(1.3);
+  transform: scale(1.5);
 }
 body .web-links {
   position: relative;
@@ -87,5 +102,21 @@ body .web-links {
   }
   33%, 100% {
     transform: rotate(-10deg);
+  }
+}
+@-webkit-keyframes conPerOri {
+  from {
+    perspective-origin: 30% 5%;
+  }
+  to {
+    perspective-origin: 50% 5%;
+  }
+}
+@keyframes conPerOri {
+  from {
+    perspective-origin: 30% 5%;
+  }
+  to {
+    perspective-origin: 50% 5%;
   }
 }/*# sourceMappingURL=style.css.map */

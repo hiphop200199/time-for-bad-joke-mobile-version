@@ -32,35 +32,27 @@ body .web-container {
 }
 body .web-container .web-title {
   position: absolute;
-  font-size: 12vw;
+  font-size: 11vw;
   font-weight: 900;
   font-style: italic;
-  letter-spacing: 1.5vw;
+  letter-spacing: 1vw;
   left: 0%;
   top: 0%;
-  text-shadow: 6px -6px 0 #222;
+  text-shadow: 3px -3px 0 #222;
+}
+body .web-container .web-title::first-letter {
+  font-size: 18vw;
+  text-shadow: 5px -5px 0 #222;
 }
 body .web-container .web-image {
   position: absolute;
-  left: 75%;
-  top: 15%;
+  left: 80%;
+  top: 5%;
   max-width: 18vw;
   -webkit-clip-path: ellipse(46% 51% at 48% 50%);
           clip-path: ellipse(46% 51% at 48% 50%);
   -webkit-animation: imgShake ease-in-out alternate 3s infinite;
           animation: imgShake ease-in-out alternate 3s infinite;
-}
-body .web-container .web-message {
-  transform: rotateX(5deg) rotateY(8deg);
-  -webkit-clip-path: polygon(4% 4%, 96% 2%, 100% 71%, 73% 77%, 80% 100%, 53% 77%, 1% 73%);
-          clip-path: polygon(4% 4%, 96% 2%, 100% 71%, 73% 77%, 80% 100%, 53% 77%, 1% 73%);
-  width: 32%;
-  height: 30%;
-  background-color: beige;
-  border: 1px solid rgb(74, 61, 49);
-  position: absolute;
-  left: 10%;
-  top: 40%;
 }
 body .web-container .web-animation {
   position: absolute;
@@ -71,8 +63,8 @@ body .web-container .web-button {
   position: absolute;
   border-radius: 100vmax;
   background-color: transparent;
-  left: 41%;
-  top: 72%;
+  left: 52%;
+  top: 87%;
   transition: 0.5s;
 }
 body .web-container .web-button:hover {
@@ -102,21 +94,5 @@ body .web-links {
   }
   33%, 100% {
     transform: rotate(-10deg);
-  }
-}
-@-webkit-keyframes conPerOri {
-  from {
-    perspective-origin: 30% 5%;
-  }
-  to {
-    perspective-origin: 50% 5%;
-  }
-}
-@keyframes conPerOri {
-  from {
-    perspective-origin: 30% 5%;
-  }
-  to {
-    perspective-origin: 50% 5%;
   }
 }/*# sourceMappingURL=style.css.map */

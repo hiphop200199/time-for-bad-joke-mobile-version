@@ -27,6 +27,15 @@ body{
                 text-shadow: 6px -6px 0 #000;
             }
         }
+        & .bgm{
+            position: absolute;
+            right: 1%;
+            top: 1%;
+            font-size: 5vw;
+            border: none;
+            background-color: transparent;
+            animation: clr 1.5s linear alternate infinite ;
+        }
        & .computer{
         position: relative;
         perspective: 100px;

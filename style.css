@@ -31,6 +31,16 @@ body .web-container .web-title::first-letter {
   font-size: 8vw;
   text-shadow: 6px -6px 0 #000;
 }
+body .web-container .bgm {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  font-size: 5vw;
+  border: none;
+  background-color: transparent;
+  -webkit-animation: clr 1.5s linear alternate infinite;
+          animation: clr 1.5s linear alternate infinite;
+}
 body .web-container .computer {
   position: relative;
   perspective: 100px;

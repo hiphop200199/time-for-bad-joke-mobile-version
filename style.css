@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Comic Sans MS";
   color: rgb(255, 238, 5);
-  background-color: #222;
+  background-color: #111;
 }
 
 body {
@@ -23,13 +23,13 @@ body .web-container .web-title {
   font-weight: 900;
   font-style: italic;
   letter-spacing: 0.5vw;
-  text-shadow: 4px -4px 0 #100;
+  text-shadow: 4px -4px 0 #000;
   -webkit-animation: clr 1.5s linear alternate infinite;
           animation: clr 1.5s linear alternate infinite;
 }
 body .web-container .web-title::first-letter {
   font-size: 8vw;
-  text-shadow: 6px -6px 0 #100;
+  text-shadow: 6px -6px 0 #000;
 }
 body .web-container .web-image {
   position: absolute;
@@ -213,13 +213,13 @@ body .web-links {
     letter-spacing: 1vw;
     left: 0%;
     top: 0%;
-    text-shadow: 4px -4px 0 #100;
+    text-shadow: 4px -4px 0 #000;
     -webkit-animation: clr 1.5s linear alternate infinite;
             animation: clr 1.5s linear alternate infinite;
   }
   body .web-container .web-title::first-letter {
     font-size: 12vw;
-    text-shadow: 6px -6px 0 #100;
+    text-shadow: 6px -6px 0 #000;
   }
   body .web-container .web-image {
     position: absolute;

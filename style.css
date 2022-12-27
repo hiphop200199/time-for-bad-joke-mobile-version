@@ -2,70 +2,177 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  cursor: none;
   font-family: "Comic Sans MS";
+  color: rgb(255, 238, 5);
+  background-color: #222;
 }
 
 body {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
 }
-body .web-cursor {
-  position: absolute;
-  pointer-events: none;
-  transform: translate(-3.75vmax, -3.75vmax);
-  z-index: 100;
-}
 body .web-container {
   position: relative;
   width: 100vw;
-  height: 90vh;
-  perspective: 250px;
-  -webkit-animation: conPerOri 2s linear infinite alternate;
-          animation: conPerOri 2s linear infinite alternate;
+  height: 100vh;
 }
 body .web-container .web-title {
-  position: absolute;
-  font-size: 11vw;
+  font-size: 5vw;
   font-weight: 900;
   font-style: italic;
-  letter-spacing: 1vw;
-  left: 0%;
-  top: 0%;
-  text-shadow: 3px -3px 0 #222;
+  letter-spacing: 0.5vw;
+  text-shadow: 4px -4px 0 #100;
+  -webkit-animation: clr 1.5s linear alternate infinite;
+          animation: clr 1.5s linear alternate infinite;
 }
 body .web-container .web-title::first-letter {
-  font-size: 18vw;
-  text-shadow: 5px -5px 0 #222;
+  font-size: 8vw;
+  text-shadow: 6px -6px 0 #100;
 }
 body .web-container .web-image {
   position: absolute;
-  left: 80%;
-  top: 5%;
-  max-width: 18vw;
+  left: 85%;
+  top: 0%;
+  max-width: 12vw;
   -webkit-clip-path: ellipse(46% 51% at 48% 50%);
           clip-path: ellipse(46% 51% at 48% 50%);
   -webkit-animation: imgShake ease-in-out alternate 3s infinite;
           animation: imgShake ease-in-out alternate 3s infinite;
 }
-body .web-container .web-animation {
+body .web-container .computer {
+  position: relative;
+  perspective: 100px;
+  left: 37.5vw;
+  width: 25vw;
+  height: 45vh;
+  -webkit-animation: clrbdr 1.5s linear alternate infinite;
+          animation: clrbdr 1.5s linear alternate infinite;
+}
+body .web-container .computer .speaker {
   position: absolute;
-  left: 50%;
-  top: 56%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 60%;
+  left: -3%;
+  width: 4vw;
+  height: 10vh;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 238, 5);
+  -webkit-animation: clrbdr 1.5s linear alternate infinite;
+          animation: clrbdr 1.5s linear alternate infinite;
+}
+body .web-container .computer .speaker .circle, body .web-container .computer .speaker .circle .incircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5vmax;
+  height: 2.5vmax;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 238, 5);
+  -webkit-animation: clrbdr 1.5s linear alternate infinite;
+          animation: clrbdr 1.5s linear alternate infinite;
+}
+body .web-container .computer .speaker .circle .incircle {
+  width: 50%;
+  height: 50%;
+  -webkit-animation: clrbdr 1.5s linear alternate infinite;
+          animation: clrbdr 1.5s linear alternate infinite;
+}
+body .web-container .computer .speaker:last-child {
+  left: 86%;
+}
+body .web-container .computer .screen, body .web-container .computer .screen .screen-up {
+  left: 5%;
+  width: 90%;
+  height: 55%;
+  border-radius: 1vmax;
+  position: absolute;
+  border: 2px solid rgb(255, 238, 5);
+  -webkit-animation: clrbdr 1.5s linear alternate infinite;
+          animation: clrbdr 1.5s linear alternate infinite;
+}
+body .web-container .computer .screen .screen-up, body .web-container .computer .screen .screen-up .screen-up {
+  left: 0;
+  width: 100%;
+  height: 80%;
+  -webkit-border-before: none;
+          border-block-start: none;
+  -webkit-border-start: none;
+          border-inline-start: none;
+  -webkit-border-end: none;
+          border-inline-end: none;
+  -webkit-animation: clrbdr 1.5s linear alternate infinite;
+          animation: clrbdr 1.5s linear alternate infinite;
+}
+body .web-container .computer .neck {
+  width: 30%;
+  height: 13%;
+  left: 35%;
+  top: 55%;
+  position: absolute;
+  background-color: rgb(255, 238, 5);
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  border-radius: 0 0 1.5vmax 1.5vmax;
+  -webkit-animation: clrbg 1.5s linear alternate infinite;
+          animation: clrbg 1.5s linear alternate infinite;
+}
+body .web-container .computer .keyboards {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(6);
+  width: 65%;
+  height: 18%;
+  left: 17.5%;
+  top: 75%;
+  position: absolute;
+  perspective: 250px;
+  border-radius: 1vmax;
+  -webkit-animation: clrbdr 1.5s linear alternate infinite;
+          animation: clrbdr 1.5s linear alternate infinite;
+  border: 1px solid rgb(255, 238, 5);
+  transform: rotateX(50deg);
+}
+body .web-container .computer .keyboards .keyboard {
+  -webkit-animation: clrbdr 1.5s linear alternate infinite;
+          animation: clrbdr 1.5s linear alternate infinite;
+  border: 1px solid rgb(255, 238, 5);
+}
+body .web-container .computer .keyboards .keyboard:first-child {
+  border-radius: 1vmax 0 0 0;
+}
+body .web-container .computer .keyboards .keyboard:nth-child(10) {
+  border-radius: 0 1vmax 0 0;
+}
+body .web-container .computer .keyboards .keyboard:nth-child(51) {
+  border-radius: 0 0 0 1vmax;
+}
+body .web-container .computer .keyboards .keyboard:last-child {
+  border-radius: 0 0 1vmax;
 }
 body .web-container .web-button {
   position: absolute;
-  border-radius: 100vmax;
+  border-radius: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: transparent;
-  left: 52%;
-  top: 87%;
+  border: none;
+  left: 45%;
+  top: 73%;
   transition: 0.5s;
+}
+body .web-container .web-button img {
+  width: 10vmax;
+  height: 10vmax;
+  border-radius: 50%;
+  background-color: transparent;
 }
 body .web-container .web-button:hover {
   transform: scale(1.5);
@@ -79,6 +186,191 @@ body .web-links {
   height: 10vh;
 }
 
+@media screen and (width < 768px) {
+  body {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  body .web-cursor {
+    position: absolute;
+    pointer-events: none;
+    background-color: transparent;
+    transform: translate(-3.75vmax, -3.75vmax);
+    z-index: 100;
+  }
+  body .web-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  body .web-container .web-title {
+    position: absolute;
+    font-size: 8vw;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 1vw;
+    left: 0%;
+    top: 0%;
+    text-shadow: 4px -4px 0 #100;
+    -webkit-animation: clr 1.5s linear alternate infinite;
+            animation: clr 1.5s linear alternate infinite;
+  }
+  body .web-container .web-title::first-letter {
+    font-size: 12vw;
+    text-shadow: 6px -6px 0 #100;
+  }
+  body .web-container .web-image {
+    position: absolute;
+    left: 80%;
+    top: 5%;
+    max-width: 18vw;
+    -webkit-clip-path: ellipse(46% 51% at 48% 50%);
+            clip-path: ellipse(46% 51% at 48% 50%);
+    -webkit-animation: imgShake ease-in-out alternate 3s infinite;
+            animation: imgShake ease-in-out alternate 3s infinite;
+  }
+  body .web-container .computer {
+    position: relative;
+    perspective: 100px;
+    left: 27.5vw;
+    top: 32.5vh;
+    width: 45vw;
+    height: 35vh;
+    background-color: transparent;
+    -webkit-animation: clrbdr 1.5s linear alternate infinite;
+            animation: clrbdr 1.5s linear alternate infinite;
+  }
+  body .web-container .computer .speaker {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 60%;
+    left: 0%;
+    width: 5vw;
+    height: 8vh;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 238, 5);
+    -webkit-animation: clrbdr 1.5s linear alternate infinite;
+            animation: clrbdr 1.5s linear alternate infinite;
+  }
+  body .web-container .computer .speaker .circle, body .web-container .computer .speaker .circle .incircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5vmax;
+    height: 2.5vmax;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 238, 5);
+    -webkit-animation: clrbdr 1.5s linear alternate infinite;
+            animation: clrbdr 1.5s linear alternate infinite;
+  }
+  body .web-container .computer .speaker .circle .incircle {
+    width: 50%;
+    height: 50%;
+    -webkit-animation: clrbdr 1.5s linear alternate infinite;
+            animation: clrbdr 1.5s linear alternate infinite;
+  }
+  body .web-container .computer .speaker:last-child {
+    left: 89%;
+  }
+  body .web-container .computer .screen, body .web-container .computer .screen .screen-up {
+    left: 5%;
+    width: 90%;
+    height: 55%;
+    border-radius: 1vmax;
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid rgb(255, 238, 5);
+    -webkit-animation: clrbdr 1.5s linear alternate infinite;
+            animation: clrbdr 1.5s linear alternate infinite;
+  }
+  body .web-container .computer .screen .screen-up, body .web-container .computer .screen .screen-up .screen-up {
+    left: 0;
+    width: 100%;
+    height: 80%;
+    -webkit-border-before: none;
+            border-block-start: none;
+    -webkit-border-start: none;
+            border-inline-start: none;
+    -webkit-border-end: none;
+            border-inline-end: none;
+    -webkit-animation: clrbdr 1.5s linear alternate infinite;
+            animation: clrbdr 1.5s linear alternate infinite;
+  }
+  body .web-container .computer .neck {
+    width: 30%;
+    height: 13%;
+    left: 35%;
+    top: 55%;
+    position: absolute;
+    background-color: rgb(255, 238, 5);
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    border-radius: 0 0 1.5vmax 1.5vmax;
+    -webkit-animation: clrbg 1.5s linear alternate infinite;
+            animation: clrbg 1.5s linear alternate infinite;
+  }
+  body .web-container .computer .keyboards {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(6);
+    width: 65%;
+    height: 18%;
+    left: 17.5%;
+    top: 75%;
+    position: absolute;
+    perspective: 250px;
+    border-radius: 1vmax;
+    -webkit-animation: clrbdr 1.5s linear alternate infinite;
+            animation: clrbdr 1.5s linear alternate infinite;
+    border: 1px solid rgb(255, 238, 5);
+    transform: rotateX(50deg);
+  }
+  body .web-container .computer .keyboards .keyboard {
+    -webkit-animation: clrbdr 1.5s linear alternate infinite;
+            animation: clrbdr 1.5s linear alternate infinite;
+    border: 1px solid rgb(255, 238, 5);
+  }
+  body .web-container .computer .keyboards .keyboard:first-child {
+    border-radius: 1vmax 0 0 0;
+  }
+  body .web-container .computer .keyboards .keyboard:nth-child(10) {
+    border-radius: 0 1vmax 0 0;
+  }
+  body .web-container .computer .keyboards .keyboard:nth-child(51) {
+    border-radius: 0 0 0 1vmax;
+  }
+  body .web-container .computer .keyboards .keyboard:last-child {
+    border-radius: 0 0 1vmax;
+  }
+  body .web-container .web-button {
+    position: absolute;
+    border-radius: 50%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+    left: 45%;
+    top: 78%;
+    transition: 0.5s;
+  }
+  body .web-container .web-button img {
+    width: 10vmax;
+    height: 10vmax;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  body .web-container .web-button:hover {
+    transform: scale(1.5);
+  }
+}
 @-webkit-keyframes imgShake {
   0%, 66% {
     transform: rotate(10deg);
@@ -87,12 +379,41 @@ body .web-links {
     transform: rotate(-10deg);
   }
 }
-
 @keyframes imgShake {
   0%, 66% {
     transform: rotate(10deg);
   }
   33%, 100% {
     transform: rotate(-10deg);
+  }
+}
+@-webkit-keyframes clr {
+  to {
+    color: rgb(168, 255, 5);
+  }
+}
+@keyframes clr {
+  to {
+    color: rgb(168, 255, 5);
+  }
+}
+@-webkit-keyframes clrbg {
+  to {
+    background-color: rgb(168, 255, 5);
+  }
+}
+@keyframes clrbg {
+  to {
+    background-color: rgb(168, 255, 5);
+  }
+}
+@-webkit-keyframes clrbdr {
+  to {
+    border-color: rgb(168, 255, 5);
+  }
+}
+@keyframes clrbdr {
+  to {
+    border-color: rgb(168, 255, 5);
   }
 }/*# sourceMappingURL=style.css.map */

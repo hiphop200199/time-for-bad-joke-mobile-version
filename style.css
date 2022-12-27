@@ -31,16 +31,6 @@ body .web-container .web-title::first-letter {
   font-size: 8vw;
   text-shadow: 6px -6px 0 #000;
 }
-body .web-container .web-image {
-  position: absolute;
-  left: 85%;
-  top: 0%;
-  max-width: 12vw;
-  -webkit-clip-path: ellipse(46% 51% at 48% 50%);
-          clip-path: ellipse(46% 51% at 48% 50%);
-  -webkit-animation: imgShake ease-in-out alternate 3s infinite;
-          animation: imgShake ease-in-out alternate 3s infinite;
-}
 body .web-container .computer {
   position: relative;
   perspective: 100px;
@@ -193,13 +183,6 @@ body .web-links {
     min-height: 100vh;
     overflow: hidden;
   }
-  body .web-cursor {
-    position: absolute;
-    pointer-events: none;
-    background-color: transparent;
-    transform: translate(-3.75vmax, -3.75vmax);
-    z-index: 100;
-  }
   body .web-container {
     position: relative;
     width: 100vw;
@@ -220,16 +203,6 @@ body .web-links {
   body .web-container .web-title::first-letter {
     font-size: 12vw;
     text-shadow: 6px -6px 0 #000;
-  }
-  body .web-container .web-image {
-    position: absolute;
-    left: 80%;
-    top: 5%;
-    max-width: 18vw;
-    -webkit-clip-path: ellipse(46% 51% at 48% 50%);
-            clip-path: ellipse(46% 51% at 48% 50%);
-    -webkit-animation: imgShake ease-in-out alternate 3s infinite;
-            animation: imgShake ease-in-out alternate 3s infinite;
   }
   body .web-container .computer {
     position: relative;
@@ -369,22 +342,6 @@ body .web-links {
   }
   body .web-container .web-button:hover {
     transform: scale(1.5);
-  }
-}
-@-webkit-keyframes imgShake {
-  0%, 66% {
-    transform: rotate(10deg);
-  }
-  33%, 100% {
-    transform: rotate(-10deg);
-  }
-}
-@keyframes imgShake {
-  0%, 66% {
-    transform: rotate(10deg);
-  }
-  33%, 100% {
-    transform: rotate(-10deg);
   }
 }
 @-webkit-keyframes clr {

@@ -27,14 +27,6 @@ body{
                 text-shadow: 6px -6px 0 #000;
             }
         }
-        & .web-image{
-            position: absolute;
-            left: 85%;
-            top: 0%;
-            max-width:12vw;
-            clip-path: ellipse(46% 51% at 48% 50%);
-            animation:imgShake ease-in-out alternate 3s infinite;
-        }
        & .computer{
         position: relative;
         perspective: 100px;
@@ -179,13 +171,7 @@ body{
     min-height: 100vh;
     overflow: hidden;
     
-    & .web-cursor{
-        position: absolute;
-        pointer-events: none;
-        background-color: transparent;
-        transform: translate(-3.75vmax, -3.75vmax); 
-        z-index: 100;
-    }
+    
     & .web-container{
         position: relative;
         width: 100vw;
@@ -205,14 +191,7 @@ body{
                 text-shadow: 6px -6px 0 #000;
             }
         }
-        & .web-image{
-            position: absolute;
-            left: 80%;
-            top: 5%;
-            max-width:18vw;
-            clip-path: ellipse(46% 51% at 48% 50%);
-            animation:imgShake ease-in-out alternate 3s infinite;
-        }
+       
        & .computer{
         position: relative;
         perspective: 100px;
@@ -349,10 +328,7 @@ body{
 
    
 
-@keyframes imgShake{
-    0%,66%{transform:rotate(10deg)}
-    33%,100%{transform:rotate(-10deg)}
-}
+
 @keyframes clr {
     to{color: rgb(168, 255, 5);}
 }

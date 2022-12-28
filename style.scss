@@ -36,6 +36,7 @@ body{
             border: none;
             background-color: transparent;
             animation: clr 1.5s linear alternate infinite ;
+            cursor: pointer;
         }
        & .computer{
         position: relative;
@@ -144,24 +145,13 @@ body{
        }
         & .web-button{
             position: absolute;
-            border-radius: 50%;
             width: fit-content;
             height:fit-content;
             background-color: transparent;
             border: none;
             left: 45%;
             top: 73%;
-            transition: 0.5s;
-            & img{
-              width: 10vmax;
-              height: 10vmax;
-               border-radius: 50%;
-               background-color: transparent;
-              
-            }
-            &:hover{
-                transform: scale(1.5);
-            }
+            cursor: pointer;    
         }
     }
     & .web-links{
@@ -312,24 +302,13 @@ body{
        }
         & .web-button{
             position: absolute;
-            border-radius: 50%;
             width: fit-content;
             height:fit-content;
             background-color: transparent;
             border: none;
             left: 45%;
             top: 78%;
-            transition: 0.5s;
-            & img{
-              width: 10vmax;
-              height: 10vmax;
-               border-radius: 50%;
-               background-color: transparent;
-              
-            }
-            &:hover{
-                transform: scale(1.5);
-            }
+            cursor: pointer;
         }
     }
     

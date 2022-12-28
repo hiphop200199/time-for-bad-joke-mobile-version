@@ -41,6 +41,7 @@ body .web-container .bgm {
   background-color: transparent;
   -webkit-animation: clr 1.5s linear alternate infinite;
           animation: clr 1.5s linear alternate infinite;
+  cursor: pointer;
 }
 body .web-container .computer {
   position: relative;
@@ -156,7 +157,6 @@ body .web-container .computer .keyboards .keyboard:last-child {
 }
 body .web-container .web-button {
   position: absolute;
-  border-radius: 50%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -167,16 +167,7 @@ body .web-container .web-button {
   border: none;
   left: 45%;
   top: 73%;
-  transition: 0.5s;
-}
-body .web-container .web-button img {
-  width: 10vmax;
-  height: 10vmax;
-  border-radius: 50%;
-  background-color: transparent;
-}
-body .web-container .web-button:hover {
-  transform: scale(1.5);
+  cursor: pointer;
 }
 body .web-links {
   position: relative;
@@ -332,7 +323,6 @@ body .web-links {
   }
   body .web-container .web-button {
     position: absolute;
-    border-radius: 50%;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -343,16 +333,7 @@ body .web-links {
     border: none;
     left: 45%;
     top: 78%;
-    transition: 0.5s;
-  }
-  body .web-container .web-button img {
-    width: 10vmax;
-    height: 10vmax;
-    border-radius: 50%;
-    background-color: transparent;
-  }
-  body .web-container .web-button:hover {
-    transform: scale(1.5);
+    cursor: pointer;
   }
 }
 @-webkit-keyframes clr {

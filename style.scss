@@ -38,6 +38,34 @@ body{
             animation: clr 1.5s linear alternate infinite ;
             cursor: pointer;
         }
+        & #playstage{
+            position: absolute;
+            right: 1%;
+            top: 1%;
+            width: 8vmax;
+            height:8vmax;
+            border: 3px dashed rgb(255, 238, 5);
+            background-color: transparent;
+            animation: clrbdr 1.5s linear alternate infinite ;
+        }
+        & #offstage{
+            position: absolute;
+            left: 0.5%;
+            top: 90%;
+            width: 8vmax;
+            height:8vmax;
+            border: 3px solid rgb(255, 238, 5);
+            background-color: transparent;
+            animation: clrbdr 1.5s linear alternate infinite ;
+        }
+        & #radio{
+            position: absolute;
+            left: 2%;
+            top: 91.8%;
+            width: 5vmax;
+            height:5vmax;
+            border: none;
+        }
        & .computer{
         position: relative;
         perspective: 100px;
@@ -326,4 +354,14 @@ body{
 }
 @keyframes clrbdr {
     to{border-color: rgb(168,255,5);}
+}
+@keyframes beatsOhYeah {
+    0%,100%{transform:scale(1);}
+   13%{transform: scale(1.3);}
+   30%{transform: scale(1.1);}
+    46%{transform: scale(1.2);}
+    53%{transform: scale(1.3);}
+    60%{transform: scale(1.1);}
+     66%{transform: scale(1.2);}
+    
 }

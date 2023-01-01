@@ -1,9 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Comic Neue", cursive;
+  font-family: "新細明體", "Comic Neue", cursive;
   color: rgb(255, 238, 5);
   background-color: #111;
 }
@@ -25,50 +26,33 @@ body .web-container .web-title {
   font-style: italic;
   letter-spacing: 0.5vw;
   text-shadow: 4px -4px 0 #000;
-  -webkit-animation: clr 1.5s linear alternate infinite;
-          animation: clr 1.5s linear alternate infinite;
 }
 body .web-container .web-title::first-letter {
   font-size: 8vw;
   text-shadow: 6px -6px 0 #000;
 }
-body .web-container .bgm {
-  position: absolute;
-  right: 1%;
-  top: 1%;
-  font-size: 5vw;
-  border: none;
-  background-color: transparent;
-  -webkit-animation: clr 1.5s linear alternate infinite;
-          animation: clr 1.5s linear alternate infinite;
-  cursor: pointer;
-}
 body .web-container #playstage {
   position: absolute;
   right: 1%;
-  top: 1%;
+  top: 1vh;
   width: 8vmax;
   height: 8vmax;
   border: 3px dashed rgb(255, 238, 5);
   background-color: transparent;
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
 }
 body .web-container #offstage {
   position: absolute;
-  left: 0.5%;
-  top: 90%;
+  left: 0.5vw;
+  top: 80vh;
   width: 8vmax;
   height: 8vmax;
   border: 3px solid rgb(255, 238, 5);
   background-color: transparent;
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
 }
 body .web-container #radio {
   position: absolute;
-  left: 2%;
-  top: 91.8%;
+  left: calc(0.5vw + 1.5vmax);
+  top: calc(80vh + 1.5vmax);
   width: 5vmax;
   height: 5vmax;
   border: none;
@@ -79,8 +63,6 @@ body .web-container .computer {
   left: 37.5vw;
   width: 25vw;
   height: 45vh;
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
 }
 body .web-container .computer .speaker {
   position: absolute;
@@ -93,8 +75,6 @@ body .web-container .computer .speaker {
   height: 10vh;
   border-radius: 5px;
   border: 2px solid rgb(255, 238, 5);
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
 }
 body .web-container .computer .speaker .circle, body .web-container .computer .speaker .circle .incircle {
   display: flex;
@@ -104,14 +84,10 @@ body .web-container .computer .speaker .circle, body .web-container .computer .s
   height: 2.5vmax;
   border-radius: 50%;
   border: 2px solid rgb(255, 238, 5);
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
 }
 body .web-container .computer .speaker .circle .incircle {
   width: 50%;
   height: 50%;
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
 }
 body .web-container .computer .speaker:last-child {
   left: 86%;
@@ -123,21 +99,20 @@ body .web-container .computer .screen, body .web-container .computer .screen .sc
   border-radius: 1vmax;
   position: absolute;
   border: 2px solid rgb(255, 238, 5);
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
 }
 body .web-container .computer .screen .screen-up, body .web-container .computer .screen .screen-up .screen-up {
   left: 0;
   width: 100%;
   height: 80%;
+  padding: 1vmax;
+  font-size: 0.8vw;
   -webkit-border-before: none;
           border-block-start: none;
   -webkit-border-start: none;
           border-inline-start: none;
   -webkit-border-end: none;
           border-inline-end: none;
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
+  background-color: #111;
 }
 body .web-container .computer .neck {
   width: 30%;
@@ -149,8 +124,6 @@ body .web-container .computer .neck {
   -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   border-radius: 0 0 1.5vmax 1.5vmax;
-  -webkit-animation: clrbg 1.5s linear alternate infinite;
-          animation: clrbg 1.5s linear alternate infinite;
 }
 body .web-container .computer .keyboards {
   display: grid;
@@ -163,14 +136,10 @@ body .web-container .computer .keyboards {
   position: absolute;
   perspective: 250px;
   border-radius: 1vmax;
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
   border: 1px solid rgb(255, 238, 5);
   transform: rotateX(50deg);
 }
 body .web-container .computer .keyboards .keyboard {
-  -webkit-animation: clrbdr 1.5s linear alternate infinite;
-          animation: clrbdr 1.5s linear alternate infinite;
   border: 1px solid rgb(255, 238, 5);
 }
 body .web-container .computer .keyboards .keyboard:first-child {
@@ -187,17 +156,31 @@ body .web-container .computer .keyboards .keyboard:last-child {
 }
 body .web-container .web-button {
   position: absolute;
+  padding: 1px;
+  background-color: rgb(255, 238, 5);
+  border: 2px solid rgb(255, 238, 5);
+  color: #111;
+  border-radius: 100vmax;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: transparent;
-  border: none;
   left: 45%;
   top: 73%;
+  -webkit-animation: bigAndSmall 1.5s infinite;
+          animation: bigAndSmall 1.5s infinite;
   cursor: pointer;
+  font-size: 3vw;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.5vw;
+  text-shadow: 0.1px -0.1px 0 #000;
+}
+body .web-container .web-button::first-letter {
+  font-size: 4vw;
+  text-shadow: 0.2px -0.2px 0 #000;
 }
 body .web-links {
   position: relative;
@@ -219,6 +202,7 @@ body .web-links {
     position: relative;
     width: 100vw;
     height: 100vh;
+    perspective: 100px;
   }
   body .web-container .web-title {
     position: absolute;
@@ -229,8 +213,6 @@ body .web-links {
     left: 0%;
     top: 0%;
     text-shadow: 4px -4px 0 #000;
-    -webkit-animation: clr 1.5s linear alternate infinite;
-            animation: clr 1.5s linear alternate infinite;
   }
   body .web-container .web-title::first-letter {
     font-size: 12vw;
@@ -244,8 +226,6 @@ body .web-links {
     width: 45vw;
     height: 35vh;
     background-color: transparent;
-    -webkit-animation: clrbdr 1.5s linear alternate infinite;
-            animation: clrbdr 1.5s linear alternate infinite;
   }
   body .web-container .computer .speaker {
     position: absolute;
@@ -258,8 +238,6 @@ body .web-links {
     height: 8vh;
     border-radius: 5px;
     border: 2px solid rgb(255, 238, 5);
-    -webkit-animation: clrbdr 1.5s linear alternate infinite;
-            animation: clrbdr 1.5s linear alternate infinite;
   }
   body .web-container .computer .speaker .circle, body .web-container .computer .speaker .circle .incircle {
     display: flex;
@@ -269,14 +247,10 @@ body .web-links {
     height: 2.5vmax;
     border-radius: 50%;
     border: 2px solid rgb(255, 238, 5);
-    -webkit-animation: clrbdr 1.5s linear alternate infinite;
-            animation: clrbdr 1.5s linear alternate infinite;
   }
   body .web-container .computer .speaker .circle .incircle {
     width: 50%;
     height: 50%;
-    -webkit-animation: clrbdr 1.5s linear alternate infinite;
-            animation: clrbdr 1.5s linear alternate infinite;
   }
   body .web-container .computer .speaker:last-child {
     left: 89%;
@@ -289,21 +263,18 @@ body .web-links {
     position: absolute;
     background-color: transparent;
     border: 2px solid rgb(255, 238, 5);
-    -webkit-animation: clrbdr 1.5s linear alternate infinite;
-            animation: clrbdr 1.5s linear alternate infinite;
   }
   body .web-container .computer .screen .screen-up, body .web-container .computer .screen .screen-up .screen-up {
     left: 0;
     width: 100%;
     height: 80%;
+    font-size: 0.5vw;
     -webkit-border-before: none;
             border-block-start: none;
     -webkit-border-start: none;
             border-inline-start: none;
     -webkit-border-end: none;
             border-inline-end: none;
-    -webkit-animation: clrbdr 1.5s linear alternate infinite;
-            animation: clrbdr 1.5s linear alternate infinite;
   }
   body .web-container .computer .neck {
     width: 30%;
@@ -315,8 +286,6 @@ body .web-links {
     -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     border-radius: 0 0 1.5vmax 1.5vmax;
-    -webkit-animation: clrbg 1.5s linear alternate infinite;
-            animation: clrbg 1.5s linear alternate infinite;
   }
   body .web-container .computer .keyboards {
     display: grid;
@@ -329,14 +298,10 @@ body .web-links {
     position: absolute;
     perspective: 250px;
     border-radius: 1vmax;
-    -webkit-animation: clrbdr 1.5s linear alternate infinite;
-            animation: clrbdr 1.5s linear alternate infinite;
     border: 1px solid rgb(255, 238, 5);
     transform: rotateX(50deg);
   }
   body .web-container .computer .keyboards .keyboard {
-    -webkit-animation: clrbdr 1.5s linear alternate infinite;
-            animation: clrbdr 1.5s linear alternate infinite;
     border: 1px solid rgb(255, 238, 5);
   }
   body .web-container .computer .keyboards .keyboard:first-child {
@@ -353,47 +318,62 @@ body .web-links {
   }
   body .web-container .web-button {
     position: absolute;
+    padding: 1px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    border-radius: 100vmax;
     background-color: transparent;
     border: none;
     left: 45%;
     top: 78%;
     cursor: pointer;
+    background-color: rgb(255, 238, 5);
+    border: 2px solid rgb(255, 238, 5);
+    color: #111;
+    -webkit-animation: bigAndSmall 1.5s infinite;
+            animation: bigAndSmall 1.5s infinite;
+    cursor: pointer;
+    font-size: 2vw;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 0.5vw;
+    text-shadow: 0.1px -0.1px 0 #000;
+  }
+  body .web-container .web-button::first-letter {
+    font-size: 3vw;
+    text-shadow: 0.2px -0.2px 0 #000;
   }
 }
-@-webkit-keyframes clr {
-  to {
-    color: rgb(168, 255, 5);
+@-webkit-keyframes bigAndSmall {
+  20% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
   }
 }
-@keyframes clr {
-  to {
-    color: rgb(168, 255, 5);
+@keyframes bigAndSmall {
+  20% {
+    transform: scale(1.3);
   }
-}
-@-webkit-keyframes clrbg {
-  to {
-    background-color: rgb(168, 255, 5);
+  30% {
+    transform: scale(1.1);
   }
-}
-@keyframes clrbg {
-  to {
-    background-color: rgb(168, 255, 5);
+  40% {
+    transform: scale(1.2);
   }
-}
-@-webkit-keyframes clrbdr {
-  to {
-    border-color: rgb(168, 255, 5);
-  }
-}
-@keyframes clrbdr {
-  to {
-    border-color: rgb(168, 255, 5);
+  50% {
+    transform: scale(1);
   }
 }
 @-webkit-keyframes beatsOhYeah {
@@ -441,4 +421,4 @@ body .web-links {
   66% {
     transform: scale(1.2);
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=UI.css.map */

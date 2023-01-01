@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0,user-scalable=no"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./image/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <title>。你</title>
-  </head>
+
+<?php include("parts-head.php");?>
   <body>
     <div class="web-container">
       <h1 class="web-title">Jokerator.</h1>
       <section id="playstage"></section>
       <section id="offstage"></section>
       <img id="radio" src="./speaker.png" alt="speaker" draggable="true" />
-      <!--<button class="bgm">&#9654;</button>-->
       <section class="computer">
         <div class="speaker">
           <div class="circle"><div class="incircle"></div></div>
@@ -101,32 +81,8 @@
         </div>
       </section>
       <button class="web-button">
-        <lottie-player
-          src="./dicedicedice.json"
-          background="transparent"
-          speed="1"
-          style="width: 10vmax; height: 10vmax"
-          loop
-          autoplay
-        ></lottie-player>
+      Start!
       </button>
-      <!--<div class="web-links">
-        <a
-          class="web-link-github"
-          target="_blank"
-          href="https://github.com/hiphop200199"
-          ><img class="web-link-github-image" src="./github.png" alt="github"
-        /></a>
-        <a
-          class="web-link-instagram"
-          target="_blank"
-          href="https://www.instagram.com/hiphop200199/"
-          ><img
-            class="web-link-instagram-image"
-            src="./instagram2.png"
-            alt="instagram"
-        /></a>
-      </div>-->
     </div>
   </body>
 </html>

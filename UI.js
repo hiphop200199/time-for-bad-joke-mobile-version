@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded",function(){
       let bgm=new Audio("cyberpunk.ogg");
       let soundEffect=new Audio("typing.ogg");
       let computer=document.querySelector(".computer");
+      let screenPage=document.querySelector(".screen-up");
       let startBtn=document.querySelector(".web-button");
       let playstage=document.getElementById("playstage");
       let offstage=document.getElementById("offstage");
@@ -9,6 +10,14 @@ document.addEventListener("DOMContentLoaded",function(){
       startBtn.addEventListener("click",function(){
         
           soundEffect.play();
+          let theAJAXobject = new XMLHttpRequest();
+          theAJAXobject.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              screenPage.innerHTML = this.responseText;
+            }
+          }
+          theAJAXobject.open("GET", "getJoke.php");
+          theAJAXobject.send();
       })
       playstage.addEventListener("drop",dropAndPlay);
       playstage.addEventListener("dragover",allowDrop);

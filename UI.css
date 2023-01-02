@@ -102,10 +102,11 @@ body .web-container .computer .screen, body .web-container .computer .screen .sc
 }
 body .web-container .computer .screen .screen-up, body .web-container .computer .screen .screen-up .screen-up {
   left: 0;
+  position: relative;
   width: 100%;
   height: 80%;
   padding: 1vmax;
-  font-size: 0.8vw;
+  font-size: 1.3vw;
   -webkit-border-before: none;
           border-block-start: none;
   -webkit-border-start: none;
@@ -181,14 +182,6 @@ body .web-container .web-button {
 body .web-container .web-button::first-letter {
   font-size: 4vw;
   text-shadow: 0.2px -0.2px 0 #000;
-}
-body .web-links {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100vw;
-  height: 10vh;
 }
 
 @media screen and (width < 768px) {
@@ -268,7 +261,7 @@ body .web-links {
     left: 0;
     width: 100%;
     height: 80%;
-    font-size: 0.5vw;
+    font-size: 0.8vw;
     -webkit-border-before: none;
             border-block-start: none;
     -webkit-border-start: none;
@@ -420,5 +413,25 @@ body .web-links {
   }
   66% {
     transform: scale(1.2);
+  }
+}
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
   }
 }/*# sourceMappingURL=UI.css.map */

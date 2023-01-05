@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded",function(){
         bgm.loop=true;
         bgm.load();
         bgm.play();
-        computer.style.animation="beatsOhYeah 7s linear alternate infinite";
+        computer.style.animation="beatsOhYeah 2.6s infinite";
        
       }
       function dropAndPause(event) {

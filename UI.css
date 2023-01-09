@@ -43,7 +43,7 @@ body .web-container .computer {
   position: relative;
   perspective: 100px;
   width: 68vw;
-  height: 43vh;
+  height: 40vh;
 }
 body .web-container .computer .speaker {
   position: absolute;
@@ -51,7 +51,7 @@ body .web-container .computer .speaker {
   justify-content: center;
   align-items: center;
   top: 60%;
-  left: -1%;
+  left: -3%;
   width: 12vw;
   height: 10vh;
   border-radius: 5px;
@@ -71,7 +71,7 @@ body .web-container .computer .speaker .circle .incircle {
   height: 50%;
 }
 body .web-container .computer .speaker:last-child {
-  left: 88%;
+  left: 85%;
 }
 body .web-container .computer .screen, body .web-container .computer .screen .screen-up {
   left: 5%;
@@ -87,7 +87,7 @@ body .web-container .computer .screen .screen-up, body .web-container .computer 
   width: 100%;
   height: 80%;
   padding: 1vmax;
-  font-size: 3vw;
+  font-size: 10vw;
   -webkit-border-before: none;
           border-block-start: none;
   -webkit-border-start: none;
@@ -141,6 +141,7 @@ body .web-container .web-button {
   background-color: rgb(255, 238, 5);
   color: #111;
   border-radius: 100vmax;
+  border: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

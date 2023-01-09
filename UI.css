@@ -25,13 +25,13 @@ body .web-container {
   height: 100vh;
 }
 body .web-container .web-title {
-  font-size: 10vw;
+  font-size: 11vw;
   font-weight: 900;
   font-style: italic;
   letter-spacing: 2vw;
 }
 body .web-container .web-title::first-letter {
-  font-size: 13vw;
+  font-size: 14vw;
 }
 body .web-container #radio {
   width: 8vmax;
@@ -42,8 +42,8 @@ body .web-container #radio {
 body .web-container .computer {
   position: relative;
   perspective: 100px;
-  width: 65vw;
-  height: 45vh;
+  width: 68vw;
+  height: 43vh;
 }
 body .web-container .computer .speaker {
   position: absolute;
@@ -52,7 +52,7 @@ body .web-container .computer .speaker {
   align-items: center;
   top: 60%;
   left: -1%;
-  width: 8vw;
+  width: 12vw;
   height: 10vh;
   border-radius: 5px;
   border: 2px solid rgb(255, 238, 5);
@@ -87,7 +87,7 @@ body .web-container .computer .screen .screen-up, body .web-container .computer 
   width: 100%;
   height: 80%;
   padding: 1vmax;
-  font-size: 1.3vw;
+  font-size: 3vw;
   -webkit-border-before: none;
           border-block-start: none;
   -webkit-border-start: none;

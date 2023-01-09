@@ -17,51 +17,32 @@ body {
 }
 body .web-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100vw;
   height: 100vh;
 }
 body .web-container .web-title {
-  font-size: 5vw;
+  font-size: 10vw;
   font-weight: 900;
   font-style: italic;
-  letter-spacing: 0.5vw;
-  text-shadow: 4px -4px 0 #000;
+  letter-spacing: 2vw;
 }
 body .web-container .web-title::first-letter {
-  font-size: 8vw;
-  text-shadow: 6px -6px 0 #000;
-}
-body .web-container #playstage {
-  position: absolute;
-  right: 1%;
-  top: 1vh;
-  width: 8vmax;
-  height: 8vmax;
-  border: 3px dashed rgb(255, 238, 5);
-  background-color: transparent;
-}
-body .web-container #offstage {
-  position: absolute;
-  left: 0.5vw;
-  top: 80vh;
-  width: 8vmax;
-  height: 8vmax;
-  border: 3px solid rgb(255, 238, 5);
-  background-color: transparent;
+  font-size: 13vw;
 }
 body .web-container #radio {
-  position: absolute;
-  left: calc(0.5vw + 1.5vmax);
-  top: calc(80vh + 1.5vmax);
-  width: 5vmax;
-  height: 5vmax;
-  border: none;
+  width: 8vmax;
+  height: 8vmax;
+  -webkit-animation: bigAndSmall 1.5s infinite;
+          animation: bigAndSmall 1.5s infinite;
 }
 body .web-container .computer {
   position: relative;
   perspective: 100px;
-  left: 37.5vw;
-  width: 25vw;
+  width: 65vw;
   height: 45vh;
 }
 body .web-container .computer .speaker {
@@ -70,8 +51,8 @@ body .web-container .computer .speaker {
   justify-content: center;
   align-items: center;
   top: 60%;
-  left: -3%;
-  width: 4vw;
+  left: -1%;
+  width: 8vw;
   height: 10vh;
   border-radius: 5px;
   border: 2px solid rgb(255, 238, 5);
@@ -80,8 +61,8 @@ body .web-container .computer .speaker .circle, body .web-container .computer .s
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.5vmax;
-  height: 2.5vmax;
+  width: 3.5vmax;
+  height: 3.5vmax;
   border-radius: 50%;
   border: 2px solid rgb(255, 238, 5);
 }
@@ -90,7 +71,7 @@ body .web-container .computer .speaker .circle .incircle {
   height: 50%;
 }
 body .web-container .computer .speaker:last-child {
-  left: 86%;
+  left: 88%;
 }
 body .web-container .computer .screen, body .web-container .computer .screen .screen-up {
   left: 5%;
@@ -156,10 +137,8 @@ body .web-container .computer .keyboards .keyboard:last-child {
   border-radius: 0 0 1vmax;
 }
 body .web-container .web-button {
-  position: absolute;
-  padding: 1px;
+  padding: 1vmax;
   background-color: rgb(255, 238, 5);
-  border: 2px solid rgb(255, 238, 5);
   color: #111;
   border-radius: 100vmax;
   width: -webkit-fit-content;
@@ -168,179 +147,17 @@ body .web-container .web-button {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  left: 45%;
-  top: 73%;
   -webkit-animation: bigAndSmall 1.5s infinite;
           animation: bigAndSmall 1.5s infinite;
-  cursor: pointer;
-  font-size: 3vw;
+  font-size: 5vw;
   font-weight: 900;
   font-style: italic;
   letter-spacing: 0.5vw;
-  text-shadow: 0.1px -0.1px 0 #000;
 }
 body .web-container .web-button::first-letter {
-  font-size: 4vw;
-  text-shadow: 0.2px -0.2px 0 #000;
+  font-size: 7vw;
 }
 
-@media screen and (width < 768px) {
-  body {
-    position: relative;
-    width: 100vw;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-  body .web-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    perspective: 100px;
-  }
-  body .web-container .web-title {
-    position: absolute;
-    font-size: 8vw;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: 1vw;
-    left: 0%;
-    top: 0%;
-    text-shadow: 4px -4px 0 #000;
-  }
-  body .web-container .web-title::first-letter {
-    font-size: 12vw;
-    text-shadow: 6px -6px 0 #000;
-  }
-  body .web-container .computer {
-    position: relative;
-    perspective: 100px;
-    left: 27.5vw;
-    top: 32.5vh;
-    width: 45vw;
-    height: 35vh;
-    background-color: transparent;
-  }
-  body .web-container .computer .speaker {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 60%;
-    left: 0%;
-    width: 5vw;
-    height: 8vh;
-    border-radius: 5px;
-    border: 2px solid rgb(255, 238, 5);
-  }
-  body .web-container .computer .speaker .circle, body .web-container .computer .speaker .circle .incircle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.5vmax;
-    height: 2.5vmax;
-    border-radius: 50%;
-    border: 2px solid rgb(255, 238, 5);
-  }
-  body .web-container .computer .speaker .circle .incircle {
-    width: 50%;
-    height: 50%;
-  }
-  body .web-container .computer .speaker:last-child {
-    left: 89%;
-  }
-  body .web-container .computer .screen, body .web-container .computer .screen .screen-up {
-    left: 5%;
-    width: 90%;
-    height: 55%;
-    border-radius: 1vmax;
-    position: absolute;
-    background-color: transparent;
-    border: 2px solid rgb(255, 238, 5);
-  }
-  body .web-container .computer .screen .screen-up, body .web-container .computer .screen .screen-up .screen-up {
-    left: 0;
-    width: 100%;
-    height: 80%;
-    font-size: 0.8vw;
-    -webkit-border-before: none;
-            border-block-start: none;
-    -webkit-border-start: none;
-            border-inline-start: none;
-    -webkit-border-end: none;
-            border-inline-end: none;
-  }
-  body .web-container .computer .neck {
-    width: 30%;
-    height: 13%;
-    left: 35%;
-    top: 55%;
-    position: absolute;
-    background-color: rgb(255, 238, 5);
-    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-    border-radius: 0 0 1.5vmax 1.5vmax;
-  }
-  body .web-container .computer .keyboards {
-    display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(6);
-    width: 65%;
-    height: 18%;
-    left: 17.5%;
-    top: 75%;
-    position: absolute;
-    perspective: 250px;
-    border-radius: 1vmax;
-    border: 1px solid rgb(255, 238, 5);
-    transform: rotateX(50deg);
-  }
-  body .web-container .computer .keyboards .keyboard {
-    border: 1px solid rgb(255, 238, 5);
-  }
-  body .web-container .computer .keyboards .keyboard:first-child {
-    border-radius: 1vmax 0 0 0;
-  }
-  body .web-container .computer .keyboards .keyboard:nth-child(10) {
-    border-radius: 0 1vmax 0 0;
-  }
-  body .web-container .computer .keyboards .keyboard:nth-child(51) {
-    border-radius: 0 0 0 1vmax;
-  }
-  body .web-container .computer .keyboards .keyboard:last-child {
-    border-radius: 0 0 1vmax;
-  }
-  body .web-container .web-button {
-    position: absolute;
-    padding: 1px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    border-radius: 100vmax;
-    background-color: transparent;
-    border: none;
-    left: 45%;
-    top: 78%;
-    cursor: pointer;
-    background-color: rgb(255, 238, 5);
-    border: 2px solid rgb(255, 238, 5);
-    color: #111;
-    -webkit-animation: bigAndSmall 1.5s infinite;
-            animation: bigAndSmall 1.5s infinite;
-    cursor: pointer;
-    font-size: 2vw;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: 0.5vw;
-    text-shadow: 0.1px -0.1px 0 #000;
-  }
-  body .web-container .web-button::first-letter {
-    font-size: 3vw;
-    text-shadow: 0.2px -0.2px 0 #000;
-  }
-}
 @-webkit-keyframes bigAndSmall {
   20% {
     transform: scale(1.3);
@@ -355,6 +172,7 @@ body .web-container .web-button::first-letter {
     transform: scale(1);
   }
 }
+
 @keyframes bigAndSmall {
   20% {
     transform: scale(1.3);
@@ -367,59 +185,5 @@ body .web-container .web-button::first-letter {
   }
   50% {
     transform: scale(1);
-  }
-}
-@-webkit-keyframes beatsOhYeah {
-  12.5% {
-    scale: 1.5;
-  }
-  25% {
-    scale: 1.2;
-  }
-  37.5%, 62.5%, 82.5% {
-    scale: 1.3;
-  }
-  50%, 75% {
-    scale: 1.1;
-  }
-  100% {
-    scale: 1;
-  }
-}
-@keyframes beatsOhYeah {
-  12.5% {
-    scale: 1.5;
-  }
-  25% {
-    scale: 1.2;
-  }
-  37.5%, 62.5%, 82.5% {
-    scale: 1.3;
-  }
-  50%, 75% {
-    scale: 1.1;
-  }
-  100% {
-    scale: 1;
-  }
-}
-@-webkit-keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-@-webkit-keyframes blink {
-  to {
-    background: transparent;
-  }
-}
-@keyframes blink {
-  to {
-    background: transparent;
   }
 }/*# sourceMappingURL=UI.css.map */
